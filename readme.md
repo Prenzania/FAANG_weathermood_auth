@@ -10,9 +10,12 @@ Only client side code is provided, this can run on localhost, no need to deploy 
 ![snapshot](img/3.PNG)
 3. (20%) Custom greeting components in the NavBar, including username and logout button.
 	- no need to look / place exactly same as the image below
+
 ![snapshot](img/1.PNG)
+
 4. (20%) On the Forecast page, show the author (sign-in username) of the todo in each TodoItem.
 	- the below image shows postItem but it is the Forecast page you should complete with
+
 ![snapshot](img/2.PNG)
 
 ## Submission
