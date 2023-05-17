@@ -7,7 +7,9 @@ Only client side code is provided, this can run on localhost, no need to deploy 
 
 1. (30%) Sign up / sign in with username and password.
 2. (30%) Sign in with google account.
+
 ![snapshot](img/3.PNG)
+
 3. (20%) Custom greeting components in the NavBar, including username and logout button.
 	- no need to look / place exactly same as the image below
 
