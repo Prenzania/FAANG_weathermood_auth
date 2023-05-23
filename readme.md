@@ -5,8 +5,8 @@ Only client side code is provided, this can run on localhost, no need to deploy 
 
 ## Requirement
 
-1. (30%) Sign up / sign in with username and password.
-2. (30%) Sign in with google account.
+1. (30%) Sign up / sign in with username and password. 
+2. (30%) Sign in with google account. `updated 0524: google sign in button should be shown, but functioning is not necessary`
 
 ![snapshot](img/3.PNG)
 
