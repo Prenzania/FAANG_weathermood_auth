@@ -22,6 +22,9 @@ import Today from 'components/Today.jsx';
 import Forecast from 'components/Forecast.jsx';
 import {setSearchText} from 'states/post-actions.js';
 import {toggleNavbar} from 'states/main-actions.js';
+import {withAuthenticator} from '@aws-amplify/ui-react';
+import {AmplifyGreetings} from '@aws-amplify/ui-react';
+import {Auth} from '@aws-amplify/auth'
 
 import './Main.css';
 
@@ -41,6 +44,7 @@ class Main extends React.Component {
         this.handleNavbarToggle = this.handleNavbarToggle.bind(this);
         this.handleSearchKeyPress = this.handleSearchKeyPress.bind(this);
         this.handleClearSearch = this.handleClearSearch.bind(this);
+        this.username = Auth.currentAuthenticatedUser().then((user) => {user.username})
     }
 
     render() {
@@ -69,6 +73,8 @@ class Main extends React.Component {
                                         }
                                     </div>
                                 </Collapse>
+                                {/* <div>{this.username}</div> */}
+                                <AmplifyGreetings showComponent='username'/>
                             </Navbar>
                         </div>
                     </div>
@@ -104,7 +110,7 @@ class Main extends React.Component {
     }
 }
 
-export default connect(state => ({
+export default withAuthenticator(connect(state => ({
     ...state.main,
     searchText: state.searchText,
-}))(Main);
+}))(Main));
